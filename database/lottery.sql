@@ -5,7 +5,7 @@ USE `lottery`;
 DROP TABLE IF EXISTS `keno`;
 
 CREATE TABLE `keno` (
-  `kenoId` char(16) NOT NULL DEFAULT '' COMMENT '主键',
+  `kenoId` char(40) NOT NULL DEFAULT '' COMMENT '主键',
   `country` varchar(16) NOT NULL COMMENT '开奖国家',
   `drawNo` varchar(8) NOT NULL DEFAULT '' COMMENT '期号',
   `result` varchar(64) NOT NULL COMMENT '开奖结果，多个数字，逗号隔开',

@@ -34,3 +34,8 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
+
+## 彩票规则说明
+
+### Keno
+http://www.esball-onlinebet.com/keno8.htm
