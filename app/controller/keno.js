@@ -125,8 +125,8 @@ class KenoController extends Controller {
     }
 
     // 大数数值个数和小数数值个数数量比较
-    let upperCount = data.result.filter(number => number >= 41 && number <= 80).length;
-    let lowerCount = data.result.filter(number => number >= 1 && number <= 40).length;
+    let lowerCount = data.result.filter(number => number >= 41 && number <= 80).length;
+    let upperCount = data.result.filter(number => number >= 1 && number <= 40).length;
     if (upperCount > lowerCount) {
       data.upperLower = 'UPPER';
     } else if (upperCount < lowerCount) {
