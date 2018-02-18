@@ -91,6 +91,10 @@ class KenoController extends Controller {
       throw new Error('开奖号码不为 20 个');
     }
 
+    if (await this.service.keno.getByCountryDrawNo(data.country, data.drawNo)) {
+      throw new Error('本期开奖已记录');
+    }
+
     // 数值计算规则：http://www.esball-onlinebet.com/keno8.htm
     // 总和
     data.total = 0;
