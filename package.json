@@ -24,7 +24,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-lottery",
+    "start": "egg-scripts start --port 7700 --daemon --title=egg-server-lottery",
     "stop": "egg-scripts stop --title=egg-server-lottery",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
