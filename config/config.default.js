@@ -12,10 +12,10 @@ module.exports = appInfo => {
   // database
   config.mysql = {
     client: {
-      host: process.evn.MYSQL_HOST || 'localhost',
-      port: process.evn.MYSQL_PORT || '3306',
-      user: process.evn.MYSQL_USER || 'root',
-      password: process.evn.MYSQL_PASSWORD || '12345665',
+      host: process.env.MYSQL_HOST || 'localhost',
+      port: process.env.MYSQL_PORT || '3306',
+      user: process.env.MYSQL_USER || 'root',
+      password: process.env.MYSQL_PASSWORD || '12345665',
       database: 'lottery',
     },
   };
