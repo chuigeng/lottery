@@ -91,8 +91,14 @@ class KenoController extends Controller {
       throw new Error('开奖号码不为 20 个');
     }
 
-    if (await this.service.keno.getByCountryDrawNo(data.country, data.drawNo)) {
-      throw new Error('本期开奖已记录');
+    let keno = await this.service.keno.getByCountryDrawNo(data.country, data.drawNo);
+    if (keno) {
+      ctx.body = {
+        data: {
+          keno
+        }
+      };
+      return;
     }
 
     // 数值计算规则：http://www.esball-onlinebet.com/keno8.htm
@@ -155,7 +161,7 @@ class KenoController extends Controller {
     data.result = data.result.join(',');
 
     data.kenoId = uuidv1();
-    const keno = await this.service.keno.create(data);
+    keno = await this.service.keno.create(data);
 
     ctx.body = {
       data: {
